@@ -14,6 +14,7 @@
             $maxFreq = $freq;
             break;
         }*/
+
         $maxFreq = reset($frecuencias);
         //$maxFreq =$frecuencias; //max(0, $frecuencias);
         foreach($frecuencias as $palabra => $frecuencia) {
@@ -36,6 +37,7 @@
         <textarea name="txtLongText"
             id="txtLongText" cols="30" rows="10"
             ><?php echo $txtLongText; ?></textarea>
+            <br>
             <br>
             <button type="submit" name="btnAnalizar">Analizar</button>
     </form>
