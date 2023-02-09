@@ -37,7 +37,7 @@
         {
             return json_encode($this->getNormalArray());
         }
-        public function get getMarcArray()
+        public function getMarcArray()
         {
             $arrMarc = array(
                 "a.b1.2" => $this->title,
@@ -57,5 +57,13 @@
             }
             return $strMarc;
         }      
+        public static function validateEntry(array $entry){
+            $errors = false;
+            if(!key_exists("title",$entry)) $errors = true;
+            if(!key_exists("author",$entry)) $errors = true;
+            if(!key_exists("dewey",$entry)) $errors = true;
+            if(!key_exists("barcode",$entry)) $errors = true;
+            return $errors;
+        }
     } 
 ?>
